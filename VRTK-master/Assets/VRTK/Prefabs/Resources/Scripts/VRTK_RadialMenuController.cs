@@ -109,23 +109,23 @@ namespace VRTK
         protected virtual void DoTouchpadClicked(object sender, ControllerInteractionEventArgs e)
         {
             DoClickButton();
+			DoShowMenu(CalculateAngle(e));
         }
 
         protected virtual void DoTouchpadUnclicked(object sender, ControllerInteractionEventArgs e)
         {
             DoUnClickButton();
+			DoHideMenu(false);
         }
 
         protected virtual void DoTouchpadTouched(object sender, ControllerInteractionEventArgs e)
         {
             touchpadTouched = true;
-            DoShowMenu(CalculateAngle(e));
         }
 
         protected virtual void DoTouchpadUntouched(object sender, ControllerInteractionEventArgs e)
         {
             touchpadTouched = false;
-            DoHideMenu(false);
         }
 
         //Touchpad finger moved position
