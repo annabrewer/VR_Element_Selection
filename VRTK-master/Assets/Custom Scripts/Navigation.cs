@@ -5,7 +5,10 @@ using UnityEngine;
 public class Navigation : MonoBehaviour {
 
 	public GameObject OVRCameraRig;
-	public float scaleFactor = 2;
+	//public GameObject leftHandAnchor;
+	//public GameObject rightHandAnchor;
+	public float scaleFactor = 2; 
+	public float rotateSpeed = 100;
 
 	private float prevDist = 0f; //Check previous distance of controllers
 
@@ -28,6 +31,8 @@ public class Navigation : MonoBehaviour {
 	void Update () {
 
 		//Take in hand positions.
+		//Vector3 lpos = leftHandAnchor.transform.position;
+		//Vector3 rpos = rightHandAnchor.transform.position;
 		Vector3 lpos = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch); 
 		Vector3 rpos = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
 
@@ -69,6 +74,7 @@ public class Navigation : MonoBehaviour {
 			if ((leftIsPressed && oldHandTriggerStateLeft < 0.9f) || leftIsPressed && oldHandTriggerStateRight > 0.9f) {
 				referencePosLeft = lpos;
 				referenceCamPos = OVRCameraRig.transform.localPosition;
+				print ("Reference point set.");
 
 			}
 
@@ -78,15 +84,38 @@ public class Navigation : MonoBehaviour {
 
 			}
 
+
 			//NAVIGATION - MOVING: Let the user pull themselves around the environment by pressing one grip.
 			if (leftIsPressed) {
-				Vector3 delta = lpos - referencePosLeft;
-				OVRCameraRig.transform.position = referenceCamPos - delta * OVRCameraRig.transform.localScale.magnitude;
+				Vector3 rawDelta = lpos - referencePosLeft; 
+				Vector3 delta = rawDelta;
+				//OVRCameraRig.transform.localPosition = referenceCamPos - delta * OVRCameraRig.transform.localScale.magnitude;
+				OVRCameraRig.transform.Translate((-1)*delta * OVRCameraRig.transform.localScale.magnitude);
+				referencePosLeft = lpos;
 
 			} else if (rightIsPressed) {
 				Vector3 delta = rpos - referencePosRight;
-				OVRCameraRig.transform.position = referenceCamPos - delta * OVRCameraRig.transform.localScale.magnitude;
+				//OVRCameraRig.transform.localPosition = referenceCamPos - delta * OVRCameraRig.transform.localScale.magnitude;
+				OVRCameraRig.transform.Translate((-1)*delta * OVRCameraRig.transform.localScale.magnitude);
+				referencePosRight = rpos;
 
+			}
+				
+			//Use either anlog stick while either grip is pressed to rotate.
+			Vector2 primeThumbstick = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+			Vector2 secondaryThumbstick = OVRInput.Get (OVRInput.Axis2D.SecondaryThumbstick);
+			float rotationCommand = primeThumbstick.x + secondaryThumbstick.x;
+
+			if (Mathf.Abs (rotationCommand) > 0) {
+				//print (primeThumbstick);
+				//print (rotationCommand);
+				Vector3 rotationVector = new Vector3 (0f, rotationCommand * rotateSpeed * Time.deltaTime, 0f);
+				OVRCameraRig.transform.eulerAngles = OVRCameraRig.transform.eulerAngles + rotationVector;
+
+				//reset references
+				//referenceCamPos = OVRCameraRig.transform.localPosition;
+				//referencePosLeft = lpos;
+				//referencePosRight = rpos;
 			}
 
 		}
