@@ -698,7 +698,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OVRCameraRig: {fileID: 399463768}
+  leftHandAnchor: {fileID: 1611449481}
+  rightHandAnchor: {fileID: 1511592844}
   scaleFactor: 2
+  rotateSpeed: 100
 --- !u!4 &1540713691
 Transform:
   m_ObjectHideFlags: 0
