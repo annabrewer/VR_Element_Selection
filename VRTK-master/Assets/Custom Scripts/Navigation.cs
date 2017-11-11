@@ -101,7 +101,7 @@ public class Navigation : MonoBehaviour {
 
 			}
 				
-			//Use either anlog stick while either grip is pressed to rotate.
+			//ROTATION - Use either anlog stick while either grip is pressed to rotate.
 			Vector2 primeThumbstick = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 			Vector2 secondaryThumbstick = OVRInput.Get (OVRInput.Axis2D.SecondaryThumbstick);
 			float rotationCommand = primeThumbstick.x + secondaryThumbstick.x;
