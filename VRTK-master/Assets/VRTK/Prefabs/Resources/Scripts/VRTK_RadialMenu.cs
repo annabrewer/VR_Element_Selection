@@ -44,6 +44,8 @@ namespace VRTK
 
         [Tooltip("An array of Buttons that define the interactive buttons required to be displayed as part of the radial menu.")]
         public List<RadialMenuButton> buttons;
+		[Tooltip("An array of Texts that describe what the buttons do.")]
+		public List<Text> texts;
         [Tooltip("The base for each button in the menu, by default set to a dynamic circle arc that will fill up a portion of the menu.")]
         public GameObject buttonPrefab;
         [Tooltip("If checked, then the buttons will be auto generated on awake.")]
@@ -72,9 +74,9 @@ namespace VRTK
         [Range(0, 1)]
         public float baseHapticStrength;
 
+
         public event HapticPulseEventHandler FireHapticPulse;
 
-        //Has to be public to keep state from editor -> play mode?
         [Tooltip("The actual GameObjects that make up the radial menu.")]
         public List<GameObject> menuButtons;
 
@@ -246,6 +248,12 @@ namespace VRTK
                         buttonIcon.transform.eulerAngles = GetComponentInParent<Canvas>().transform.eulerAngles;
                     }
                 }
+
+				//Place text
+				//RectTransform t_transform = texts[i].GetComponent<RectTransform>();
+				//t_transform.transform.parent = buttonIcon;
+				//t_transform.transform.position += new Vector3 (0f, 4f, 0f);
+
                 menuButtons.Add(newButton);
 
             }
