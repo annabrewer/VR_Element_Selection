@@ -61,13 +61,14 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 				if (!alreadyListed) {
 					ChangeAlpha (hitMat, 0.5f);
 					blockingObjects.Add (hitObject);
-					print ("Object added.");
-					print ("Blocking objects: " + blockingObjects);
+					//print ("Object added.");
+					//print ("Blocking objects: " + blockingObjects);
 				}
 			}
 		}
 
 		//IF AN OBJECT IN BLOCKING OBJECTS IS NOT IN HIT OBJECTS, RESTORE ITS ALPHA VALUE TO 1 AND REMOVE IT FROM BLOCKING OBJECTS
+		/*
 		print("Hit Objects: " + hitObjects.Count());
 		foreach (GameObject hitObject in hitObjects) {
 			print (hitObject.name);
@@ -76,7 +77,7 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 		foreach (GameObject blockingObject in blockingObjects) {
 			print (blockingObject.name);
 		}
-
+		*/
 		foreach (GameObject blockingObject in blockingObjects) {
 			bool stillHit = false;
 			foreach (GameObject hitObject in hitObjects) {
