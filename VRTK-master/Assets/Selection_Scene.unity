@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 442605003}
   m_Layer: 0
   m_Name: Small Blue Cube
-  m_TagString: edge
+  m_TagString: face
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,6 +867,8 @@ GameObject:
   - component: {fileID: 1540713690}
   - component: {fileID: 1540713692}
   - component: {fileID: 1540713693}
+  - component: {fileID: 1540713694}
+  - component: {fileID: 1540713695}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -907,7 +909,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1540713689}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0adb8d98a90c534183c50cbaddb6a1a, type: 3}
   m_Name: 
@@ -924,6 +926,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d2860c7e89f424cabd258d8b39780a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1540713694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540713689}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c08a0d7f5c11b749aa93b99c84b77f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1540713695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540713689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06078fae36cca94eb62328ecb63c52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1552741023 stripped
@@ -1126,8 +1150,8 @@ MonoBehaviour:
   activeScriptingDefineSymbolsWithoutSDKClasses:
   - symbol: VRTK_DEFINE_SDK_OCULUS_AVATAR
     buildTargetGroupName: Standalone
-  scriptAliasLeftController: {fileID: 0}
-  scriptAliasRightController: {fileID: 0}
+  scriptAliasLeftController: {fileID: 2053216078}
+  scriptAliasRightController: {fileID: 196465873}
   autoManageVRSettings: 1
   autoLoadSetup: 1
   setups:
@@ -1520,6 +1544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053216080}
   - component: {fileID: 2053216079}
+  - component: {fileID: 2053216081}
   m_Layer: 0
   m_Name: LeftController
   m_TagString: Untagged
@@ -1588,3 +1613,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2053216081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053216078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf1c68ccf50a478cbcb3f252e4be182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
+  texts: []
+  buttonPrefab: {fileID: 0}
+  generateOnAwake: 1
+  buttonThickness: 0.5
+  buttonColor: {r: 1, g: 1, b: 1, a: 1}
+  offsetDistance: 1
+  offsetRotation: 0
+  rotateIcons: 0
+  iconMargin: 0
+  isShown: 1
+  hideOnRelease: 0
+  executeOnUnclick: 1
+  baseHapticStrength: 0
+  menuButtons: []

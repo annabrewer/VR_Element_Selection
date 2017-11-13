@@ -44,15 +44,16 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 		for (int i = 0; i < hitsBoth.Length; i++) {
 			RaycastHit hit = hitsBoth [i];
 			hitObjects.Add(hit.collider.gameObject);
-			if (hit.collider.tag == "object") {
+			if (hit.collider.tag == "object" || hit.collider.tag == "face") {
 				//print ("Object collided.");
 				Material hitMat = hit.collider.GetComponent<Renderer>().material;
 				GameObject hitObject = hit.collider.gameObject;
 
 				//CHECK IF IT'S ALREADY IN BLOCKING OBJECTS
 				bool alreadyListed = false;
-				foreach (GameObject blockingObject in blockingObjects) {
-					if (hitObject == blockingObject) {
+				//foreach (GameObject blockingObject in blockingObjects) {
+				for (int j = 0; j < blockingObjects.Count; j++) {
+					if (hitObject == blockingObjects[j]) {
 						alreadyListed = true;
 					} 
 				}
@@ -78,16 +79,18 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 			print (blockingObject.name);
 		}
 		*/
-		foreach (GameObject blockingObject in blockingObjects) {
+		//foreach (GameObject blockingObject in blockingObjects) {
+		for (int k = 0; k < blockingObjects.Count; k ++) {
 			bool stillHit = false;
-			foreach (GameObject hitObject in hitObjects) {
-				if (blockingObject == hitObject) {
+			//foreach (GameObject hitObject in hitObjects) {
+			for (int l = 0; l < hitObjects.Count; l++) {
+				if (blockingObjects[k] == hitObjects[l]) {
 					stillHit = true;
 				}
 			}
 			if (!stillHit) {
-				ChangeAlpha (blockingObject.GetComponent<Renderer> ().material, 1f);
-				blockingObjects.Remove (blockingObject);
+				ChangeAlpha (blockingObjects[k].GetComponent<Renderer> ().material, 1f);
+				blockingObjects.Remove (blockingObjects[k]);
 			}
 		}
 

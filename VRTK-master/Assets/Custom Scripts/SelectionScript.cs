@@ -10,18 +10,24 @@ public class SelectionScript : MonoBehaviour {
 	private float indexTriggerState = 0;
 	private float oldIndexTriggerState = 0;
 	private Material otherMat;
-	private List<GameObject> selectedObjects = new List<GameObject> ();
+	private List<GameObject> selectedObjects;
 	private GameObject currentHover = null;
 	private Object_Selection_Status currentStatus;
 	private int selectionMode;
 	private bool validInteraction;
 
+	private int triggerCount = 0;
 
-	// Update is called once per frame
-	void Update () {
+	//use fixed update to sync w/ ontrigger
+	void FixedUpdate () {
 		oldIndexTriggerState = indexTriggerState;
 		indexTriggerState = OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger, controller);
 		multiSelectButton = OVRInput.Get (OVRInput.Button.One, controller);
+
+		selectedObjects = selectedObjectsScript.selectedObjects;
+
+		//print ("Old trigger state: " + oldIndexTriggerState);
+		//print ("New trigger state: " + indexTriggerState);
 
 		selectionMode = MenuModeSelection.selectionMode;
 
@@ -30,14 +36,20 @@ public class SelectionScript : MonoBehaviour {
 
 		//IF TRIGGER IS PRESSED W/O HOLDING DOWN MULTI SELECT BUTTON, CLEAR SELECTED LIST
 		if ((indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) && !multiSelectButton) {
+			print ("TRIGGERED" + triggerCount);
+			triggerCount++;
 			foreach (GameObject selectedObject in selectedObjects) {
 				Object_Selection_Status objStatus = GameObject.Find (selectedObject.name).GetComponent<Object_Selection_Status> ();
-				objStatus.selectionStatus = false;
+				if (selectedObject != currentHover) {
+					objStatus.selectionStatus = false;
+				}
 			}
 		}
-		if (currentHover != null)
+		/*
+		if (currentHover != null) {
 			print ("Currently hovering on: " + currentHover.name);
-
+		}
+		*/
 	}
 
 	void OnTriggerEnter (Collider other) {
