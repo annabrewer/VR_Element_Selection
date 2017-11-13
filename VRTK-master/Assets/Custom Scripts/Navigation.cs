@@ -24,7 +24,7 @@ public class Navigation : MonoBehaviour {
 	private Vector3 referencePosLeft;
 	private Vector3 referencePosRight;
 
-	private Vector3 referenceCamPos;
+	//private Vector3 referenceCamPos;
 	//private Vector3 referenceCamScale;
 
 	// Update is called once per frame
@@ -73,14 +73,14 @@ public class Navigation : MonoBehaviour {
 			//When the triggers are pressed, set the controller's current location and the camera's position as reference positions
 			if ((leftIsPressed && oldHandTriggerStateLeft < 0.9f) || leftIsPressed && oldHandTriggerStateRight > 0.9f) {
 				referencePosLeft = lpos;
-				referenceCamPos = OVRCameraRig.transform.localPosition;
+				//referenceCamPos = OVRCameraRig.transform.localPosition;
 				print ("Reference point set.");
 
 			}
 
 			if ((rightIsPressed && oldHandTriggerStateRight < 0.9f) || (rightIsPressed && oldHandTriggerStateLeft > 0.9f)) {
 				referencePosRight = rpos;
-				referenceCamPos = OVRCameraRig.transform.localPosition;
+				//referenceCamPos = OVRCameraRig.transform.localPosition;
 
 			}
 
@@ -101,7 +101,7 @@ public class Navigation : MonoBehaviour {
 
 			}
 				
-			//Use either anlog stick while either grip is pressed to rotate.
+			//ROTATION - Use either anlog stick while either grip is pressed to rotate.
 			Vector2 primeThumbstick = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 			Vector2 secondaryThumbstick = OVRInput.Get (OVRInput.Axis2D.SecondaryThumbstick);
 			float rotationCommand = primeThumbstick.x + secondaryThumbstick.x;
