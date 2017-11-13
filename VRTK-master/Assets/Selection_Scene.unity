@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 442605003}
   m_Layer: 0
   m_Name: Small Blue Cube
-  m_TagString: object
+  m_TagString: edge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +411,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c466b89bb972b8a42bd266c102f8f2cb, type: 2}
+  - {fileID: 2100000, guid: 2be9fb9bcea91e7419d90800fabf8e0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 451970070}
   - component: {fileID: 451970069}
   - component: {fileID: 451970068}
+  - component: {fileID: 451970072}
   m_Layer: 0
   m_Name: Big Blue Cube
   m_TagString: object
@@ -545,6 +546,20 @@ Transform:
   m_Father: {fileID: 841668879}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &451970072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451970067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63355e13533789345b50cb2c19d24c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverStatus: 0
+  selectionStatus: 0
+  hoverBrightness: 0.2
 --- !u!1 &559279555
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +677,7 @@ GameObject:
   - component: {fileID: 1044799968}
   - component: {fileID: 1044799967}
   - component: {fileID: 1044799970}
+  - component: {fileID: 1044799971}
   m_Layer: 0
   m_Name: Big Yellow Cube Front
   m_TagString: object
@@ -748,6 +764,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1044799971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044799965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63355e13533789345b50cb2c19d24c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverStatus: 0
+  selectionStatus: 0
+  hoverBrightness: 0.2
 --- !u!1001 &1171814066
 Prefab:
   m_ObjectHideFlags: 0
@@ -836,6 +866,7 @@ GameObject:
   - component: {fileID: 1540713691}
   - component: {fileID: 1540713690}
   - component: {fileID: 1540713692}
+  - component: {fileID: 1540713693}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -884,6 +915,17 @@ MonoBehaviour:
   CenterEyeAnchor: {fileID: 886495689}
   leftHandAnchor: {fileID: 1611449481}
   rightHandAnchor: {fileID: 1511592844}
+--- !u!114 &1540713693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1540713689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d2860c7e89f424cabd258d8b39780a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1552741023 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 158226, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
@@ -1115,6 +1157,7 @@ GameObject:
   - component: {fileID: 1776285998}
   - component: {fileID: 1776285997}
   - component: {fileID: 1776285996}
+  - component: {fileID: 1776285999}
   m_Layer: 0
   m_Name: Big Green Cube
   m_TagString: object
@@ -1186,6 +1229,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1776285994}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1776285999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1776285994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63355e13533789345b50cb2c19d24c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverStatus: 0
+  selectionStatus: 0
+  hoverBrightness: 0.2
 --- !u!1 &1807038769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1254,7 @@ GameObject:
   - component: {fileID: 1807038773}
   - component: {fileID: 1807038772}
   - component: {fileID: 1807038771}
+  - component: {fileID: 1807038774}
   m_Layer: 0
   m_Name: Big Yellow Cube Back
   m_TagString: object
@@ -1268,6 +1326,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1807038769}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1807038774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807038769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63355e13533789345b50cb2c19d24c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverStatus: 0
+  selectionStatus: 0
+  hoverBrightness: 0.2
 --- !u!1001 &1832279109
 Prefab:
   m_ObjectHideFlags: 0
@@ -1341,7 +1413,7 @@ GameObject:
   - component: {fileID: 1967440774}
   m_Layer: 0
   m_Name: Small Cyan Cube
-  m_TagString: object
+  m_TagString: vertex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
