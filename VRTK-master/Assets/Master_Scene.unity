@@ -2110,7 +2110,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: touchpadText
-      value: Element Type Filter\nFrom Top, CCW:\nVertex\nEdge\nFace\nObject\nAll
+      value: Element Type Filter\nCounterclockwise:\nVertex\nEdge\nFace\nObject\nAll
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: gripText
@@ -2611,7 +2611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: touchpadText
-      value: Element Type Filter\nFrom Top, CCW:\nVertex\nEdge\nFace\nObject\nAll
+      value: Element Type Filter\nCounterclockwise:\nVertex\nEdge\nFace\nObject\nAll
       objectReference: {fileID: 0}
     - target: {fileID: 11415184, guid: 910be6460ba00dc4bb13725c3ff972cb, type: 2}
       propertyPath: buttonOneText

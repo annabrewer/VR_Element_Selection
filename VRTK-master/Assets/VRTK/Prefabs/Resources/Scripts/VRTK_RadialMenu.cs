@@ -178,7 +178,7 @@ namespace VRTK
         /// <param name="force">If true then the menu is always hidden.</param>
         public virtual void HideMenu(bool force)
         {
-			print ("Menu hidden!!!");
+			//print ("Menu hidden.");
 			MenuModeSelection.ChangeMode(tempMode);
             if (isShown && (hideOnRelease || force))
             {

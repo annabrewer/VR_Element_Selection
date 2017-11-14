@@ -6,7 +6,7 @@ public class SelectionScript : MonoBehaviour {
 
 	public OVRInput.Controller controller;
 
-	private bool multiSelectButton = false;
+	private bool multiSelectButton;
 	private float indexTriggerState = 0;
 	private float oldIndexTriggerState = 0;
 	private Material otherMat;
@@ -22,9 +22,9 @@ public class SelectionScript : MonoBehaviour {
 	void FixedUpdate () {
 		oldIndexTriggerState = indexTriggerState;
 		indexTriggerState = OVRInput.Get (OVRInput.Axis1D.PrimaryIndexTrigger, controller);
-		multiSelectButton = OVRInput.Get (OVRInput.Button.One, controller);
 
 		selectedObjects = selectedObjectsScript.selectedObjects;
+		multiSelectButton = selectedObjectsScript.multiSelectButton;
 
 		//print ("Old trigger state: " + oldIndexTriggerState);
 		//print ("New trigger state: " + indexTriggerState);
