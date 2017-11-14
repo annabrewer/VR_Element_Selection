@@ -172,9 +172,9 @@ namespace VRTK
         /// </summary>
         /// <param name="state">The state of whether to display or hide the controller tooltips, true will display and false will hide.</param>
         /// <param name="element">The specific element to hide the tooltip on, if it is `TooltipButtons.None` then it will hide all tooltips. Optional parameter defaults to `TooltipButtons.None`</param>
-        public virtual void ToggleTips(bool state, TooltipButtons element = TooltipButtons.None)
+		public virtual void ToggleTips(bool state, TooltipButtons element = TooltipButtons.None)
         {
-            if (element == TooltipButtons.None)
+			if (element == TooltipButtons.None)
             {
                 for (int i = 1; i < buttonTooltips.Length; i++)
                 {
@@ -193,6 +193,8 @@ namespace VRTK
             }
             EmitEvent(state, element);
         }
+
+
 
         protected virtual void Awake()
         {

@@ -109,13 +109,13 @@ namespace VRTK
         protected virtual void DoTouchpadClicked(object sender, ControllerInteractionEventArgs e)
         {
             DoClickButton();
-			DoShowMenu(CalculateAngle(e));
+
         }
 
         protected virtual void DoTouchpadUnclicked(object sender, ControllerInteractionEventArgs e)
         {
             DoUnClickButton();
-			DoHideMenu(false);
+
         }
 
         protected virtual void DoTouchpadTouched(object sender, ControllerInteractionEventArgs e)
@@ -126,6 +126,8 @@ namespace VRTK
         protected virtual void DoTouchpadUntouched(object sender, ControllerInteractionEventArgs e)
         {
             touchpadTouched = false;
+			DoHideMenu(false);
+
         }
 
         //Touchpad finger moved position
@@ -134,6 +136,11 @@ namespace VRTK
             if (touchpadTouched)
             {
                 DoChangeAngle(CalculateAngle(e));
+				//float handTriggerStateLeft = OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.LTouch);
+				//float handTriggerStateRight = OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch);
+				//if (handTriggerStateLeft <= 0.1f && handTriggerStateRight <= 0.1f) {
+					DoShowMenu (CalculateAngle (e));
+				//}
             }
         }
 

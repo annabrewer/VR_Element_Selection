@@ -14,10 +14,10 @@ public class MenuModeSelection : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 
-	public void ChangeMode(int newMode){
+	public static void ChangeMode(int newMode){
 		selectionMode = newMode;
 		print ("Selection Mode: " + selectionMode);
 	}

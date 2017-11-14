@@ -74,6 +74,8 @@ namespace VRTK
         [Range(0, 1)]
         public float baseHapticStrength;
 
+		public int tempMode = 4; //temp selection mode before it is finalized when HideMenu() is called
+
 
         public event HapticPulseEventHandler FireHapticPulse;
 
@@ -84,6 +86,10 @@ namespace VRTK
         protected int currentPress = -1;
         protected Coroutine tweenMenuScaleRoutine;
 
+
+		public void ChangeTempMode(int m){
+			tempMode = m;
+		}
         /// <summary>
         /// The HoverButton method is used to set the button hover at a given angle.
         /// </summary>
@@ -172,6 +178,8 @@ namespace VRTK
         /// <param name="force">If true then the menu is always hidden.</param>
         public virtual void HideMenu(bool force)
         {
+			print ("Menu hidden!!!");
+			MenuModeSelection.ChangeMode(tempMode);
             if (isShown && (hideOnRelease || force))
             {
                 isShown = false;

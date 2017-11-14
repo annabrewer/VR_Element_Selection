@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Model : MonoBehaviour {
 
-    float edgeRadius = 0.4F;
-    float vertexRadius = 0.4F;
+	float faceThickness = 0.01F;
+	float edgeToSizeRatio = 0.05F;
 
     void Start ()
     {
         this.gameObject.name = "model";
         //this.gameObject.tag = "model"; - probably don't need a tag
-        InstantiateCube();
+        InstantiateCubeWithinCube();
 	}
 	
 	void Update ()
@@ -19,12 +19,49 @@ public class Model : MonoBehaviour {
 		// :^)
 	}
 
-    //to create a different type of object, make a different method
-    void InstantiateCube ()
+	//makes a big cube containing a smaller cube at a 45 degree angle
+	void InstantiateCubeWithinCube () {
+		float size = 1;
+
+		GameObject innerCube = new GameObject("innerCube");
+		GameObject outerCube = new GameObject("outerCube");
+
+		innerCube.transform.parent = this.gameObject.transform;
+		outerCube.transform.parent = this.gameObject.transform;
+
+		innerCube.transform.position = new Vector3(0, 1, size * 2);
+		outerCube.transform.position = new Vector3(0, 1, size * 2);
+
+		innerCube.transform.eulerAngles = new Vector3(45, 45, 45);
+
+		InstantiateCube (innerCube, size/3, color:Color.green);
+		InstantiateCube (outerCube, size, color:Color.blue);
+
+		/*
+		foreach (Transform t in innerCube.transform) {
+			GameObject g = t.gameObject;
+			if (g.name.Contains ("face")) {
+				g.GetComponent<Renderer> ().material.EnableKeyword ("_EMISSION");
+				g.GetComponent<Renderer> ().material.SetColor ("_EmissionColor", Color.blue);
+			}
+		}
+		*/
+
+		GameObject lightGameObject = new GameObject ("The Light");
+		Light lightComp = lightGameObject.AddComponent<Light> ();
+		lightComp.color = Color.white;
+		lightGameObject.transform.position = new Vector3 (0, 1 + size * 2 / 3, size * 2);
+
+		GameObject lightGameObject2 = new GameObject ("The Second Light");
+		Light lightComp2 = lightGameObject2.AddComponent<Light> ();
+		lightComp2.color = Color.white;
+		lightGameObject2.transform.position = new Vector3 (0, 1 - size * 2 / 3, size * 2);
+	}
+
+    //makes a cube around a parent game object
+	void InstantiateCube (GameObject center, float size, Color color)
     {
-        float size = 1;
-        this.gameObject.transform.position = new Vector3(0, size / 2, 0);
-        this.gameObject.transform.eulerAngles = new Vector3(45, 45, 45);
+		//edge radius and vertex radius are equal
         
         List<Vector3> axes = new List<Vector3> { Vector3.up, Vector3.right, Vector3.forward, Vector3.down, Vector3.left, Vector3.back };
 
@@ -33,14 +70,18 @@ public class Model : MonoBehaviour {
         //instantiate faces
         foreach (Vector3 v in axes)
         {
-            string x = v.x.ToString();
+			string x = v.x.ToString();
             string y = v.y.ToString();
             string z = v.z.ToString();
-            string faceName = "face" + x + y + z;
-            //bug here - bottom face is facing up instead of down!!
-            Vector3 dir = 90 * (Vector3.down - v);
-            //Vector3 dir = 90 * new Vector3(v.z, v.y, v.x);
-            InstantiateFace(faceName, v*size*5, dir, Vector3.one * size);
+			string faceName = "face" + x + y + z + " " + center.name;
+            //super jank TT^TT
+			Vector3 dir;
+			if (v.y == -1) {
+				dir = new Vector3 (180, 0, 0);
+			} else {
+				dir = 90 * (Vector3.down - v);
+			}
+			InstantiateFace(center, faceName, v*size / 2, dir, size, size, color);
         }
 
         //instantiate edges
@@ -56,10 +97,10 @@ public class Model : MonoBehaviour {
                         string x = v.x.ToString();
                         string y = v.y.ToString();
                         string z = v.z.ToString();
-                        string edgeName = "edge" + x + y + z;
+						string edgeName = "edge" + x + y + z + " " + center.name;
 
                         Vector3 dir = 90 * (Vector3.one - new Vector3(v.z, v.y, v.x));
-                        InstantiateEdge(edgeName, v * size * 5, dir, size * 5);
+						InstantiateEdge(center, edgeName, v * size / 2, dir, size/2, size*edgeToSizeRatio, color);
                     }
                 }
             }
@@ -77,46 +118,71 @@ public class Model : MonoBehaviour {
                     string x = v.x.ToString();
                     string y = v.y.ToString();
                     string z = v.z.ToString();
-                    string vertexName = "vertex" + x + y + z;
-                    InstantiateVertex(vertexName, v * size * 5);
+					string vertexName = "vertex" + x + y + z + " " + center.name;
+					InstantiateVertex(center, vertexName, v * size / 2, size * edgeToSizeRatio, color);
                 }
             }
         }
     }
 
-    void InstantiateFace (string name, Vector3 position, Vector3 rotation, Vector3 scale)
+	//in the future, maybe restructure so don't need to pass in parent parameter
+    void InstantiateFace (GameObject parent, string name, Vector3 position, Vector3 rotation, float width, float height, Color color)
     {
-        GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
         obj.name = name;
-        obj.transform.parent = this.gameObject.transform;
+        obj.transform.parent = parent.transform;
         obj.transform.localPosition = position;
         obj.transform.localEulerAngles = rotation; //LocalEulerAngles takes Vector3, LocalRotation takes Quaternion
-        obj.transform.localScale = scale;
+		obj.transform.localScale = new Vector3 (width, faceThickness, height);
         obj.tag = "face";
-        //obj.AddComponent<Object_Selection_Status>();
+		//obj.AddComponent<BoxCollider> ();
+		obj.GetComponent<BoxCollider>().isTrigger = true;
+		obj.AddComponent<Rigidbody> ();
+		obj.GetComponent<Rigidbody>().useGravity = false;
+		obj.GetComponent<Rigidbody>().isKinematic = true;
+        obj.AddComponent<Object_Selection_Status>();
+		Renderer myRend = obj.GetComponent<Renderer>();
+		myRend.material.color = color;
+		//myRend.material.SetFloat ("_Mode", 0.0f);
     }
 
-    void InstantiateEdge (string name, Vector3 position, Vector3 rotation, float length)
+	void InstantiateEdge (GameObject parent, string name, Vector3 position, Vector3 rotation, float length, float radius, Color color)
     {
         GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
         obj.name = name;
-        obj.transform.parent = this.gameObject.transform;
+        obj.transform.parent = parent.transform;
         obj.transform.localPosition = position;
         obj.transform.localEulerAngles = rotation; //LocalEulerAngles takes Vector3, LocalRotation takes Quaternion
-        obj.transform.localScale = new Vector3(edgeRadius, length, edgeRadius);
+		obj.transform.localScale = new Vector3(radius, length, radius);
         obj.tag = "edge";
-        //obj.AddComponent<Object_Selection_Status>();
+		//obj.AddComponent<CapsuleCollider> ();
+		obj.GetComponent<CapsuleCollider>().isTrigger = true;
+		obj.AddComponent<Rigidbody> ();
+		obj.GetComponent<Rigidbody>().useGravity = false;
+		obj.GetComponent<Rigidbody>().isKinematic = true;
+        obj.AddComponent<Object_Selection_Status>();
+		Renderer myRend = obj.GetComponent<Renderer>();
+		myRend.material.color = color;
+		//myRend.material.SetFloat ("_Mode", 0.0f);
     }
 
-    void InstantiateVertex (string name, Vector3 position)
+	void InstantiateVertex (GameObject parent, string name, Vector3 position, float radius, Color color)
     {
         GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         obj.name = name;
-        obj.transform.parent = this.gameObject.transform;
+        obj.transform.parent = parent.transform;
         obj.transform.localPosition = position;
-        obj.transform.localScale = Vector3.one * vertexRadius;
+		obj.transform.localScale = Vector3.one * radius;
         obj.tag = "vertex";
-        //obj.AddComponent<Object_Selection_Status>();
+		//obj.AddComponent<SphereCollider> ();
+		obj.GetComponent<SphereCollider>().isTrigger = true;
+		obj.AddComponent<Rigidbody> ();
+		obj.GetComponent<Rigidbody>().useGravity = false;
+		obj.GetComponent<Rigidbody>().isKinematic = true;
+        obj.AddComponent<Object_Selection_Status>();
+		Renderer myRend = obj.GetComponent<Renderer>();
+		myRend.material.color = color;
+		//myRend.material.SetFloat ("_Mode", 0.0f);
     }
 
 }

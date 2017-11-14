@@ -27,8 +27,8 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 		Ray camToLeft = new Ray (cameraPos, lPos - cameraPos);
 
 		//CALCULATE DISTANCE BETWEEN CAMERA AND CONTROLLERS
-		rightDist = (rPos - cameraPos).magnitude;
-		leftDist = (lPos - cameraPos).magnitude;
+		rightDist = (rPos - cameraPos).magnitude * 0.8f;
+		leftDist = (lPos - cameraPos).magnitude * 0.8f;
 
 		//RAYCAST PREP
 		RaycastHit[] hitsRight;
@@ -44,28 +44,39 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 		for (int i = 0; i < hitsBoth.Length; i++) {
 			RaycastHit hit = hitsBoth [i];
 			hitObjects.Add(hit.collider.gameObject);
-			if (hit.collider.tag == "object" || hit.collider.tag == "face") {
+			//if (hit.collider.tag == "object" || hit.collider.tag == "face") {
+			if (hit.collider.name != "RightHandAnchor" && hit.collider.name != "LeftHandAnchor") {
 				//print ("Object collided.");
-				Material hitMat = hit.collider.GetComponent<Renderer>().material;
+				Material hitMat = hit.collider.GetComponent<Renderer> ().material;
 				GameObject hitObject = hit.collider.gameObject;
+			
 
 				//CHECK IF IT'S ALREADY IN BLOCKING OBJECTS
 				bool alreadyListed = false;
 				//foreach (GameObject blockingObject in blockingObjects) {
 				for (int j = 0; j < blockingObjects.Count; j++) {
-					if (hitObject == blockingObjects[j]) {
+					if (hitObject == blockingObjects [j]) {
 						alreadyListed = true;
 					} 
 				}
 
 				//IF IT'S NOT, ADD IT TO BLOCKING OBJECTS AND TURN IT TRANSPARENT
 				if (!alreadyListed) {
+					hitMat.SetFloat ("_Mode", 2);
+					hitMat.SetInt ("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+					hitMat.SetInt ("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+					hitMat.SetInt ("_ZWrite", 0);
+					hitMat.DisableKeyword ("_ALPHATEST_ON");
+					hitMat.EnableKeyword ("_ALPHABLEND_ON");
+					hitMat.DisableKeyword ("_ALPHAPREMULTIPLY_ON");
+					hitMat.renderQueue = 3000;
 					ChangeAlpha (hitMat, 0.5f);
 					blockingObjects.Add (hitObject);
 					//print ("Object added.");
 					//print ("Blocking objects: " + blockingObjects);
 				}
 			}
+			//}
 		}
 
 		//IF AN OBJECT IN BLOCKING OBJECTS IS NOT IN HIT OBJECTS, RESTORE ITS ALPHA VALUE TO 1 AND REMOVE IT FROM BLOCKING OBJECTS

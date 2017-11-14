@@ -6,7 +6,7 @@ public class Object_Selection_Status : MonoBehaviour {
 
 	public bool hoverStatus;
 	public bool selectionStatus;
-	public float hoverBrightness = 0.2f;
+	public float hoverBrightness = 0.3f;
 	private Color originalColor;
 	private Color originalColorHover;
 

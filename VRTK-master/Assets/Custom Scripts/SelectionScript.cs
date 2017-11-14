@@ -36,7 +36,7 @@ public class SelectionScript : MonoBehaviour {
 
 		//IF TRIGGER IS PRESSED W/O HOLDING DOWN MULTI SELECT BUTTON, CLEAR SELECTED LIST
 		if ((indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) && !multiSelectButton) {
-			print ("TRIGGERED" + triggerCount);
+			//print ("TRIGGERED" + triggerCount);
 			triggerCount++;
 			foreach (GameObject selectedObject in selectedObjects) {
 				Object_Selection_Status objStatus = GameObject.Find (selectedObject.name).GetComponent<Object_Selection_Status> ();
@@ -53,8 +53,16 @@ public class SelectionScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
+
+	}
+
+	void OnTriggerStay (Collider other) {
+		/* currentHover is the game object that this controller should be giving the hover state to.
+		 * Whenever the controller collides with another game object, it might set the new object to be currentHover.
+		 * An object should set its hover state to on only if it is the currentHover.
+		 */
 		//Check Selection mode to ensure valid interaction.
-		if ((selectionMode == 0 || selectionMode == 4) && (other.gameObject.CompareTag("vertex"))) {
+		if ((selectionMode == 0 || selectionMode == 4) && (other.CompareTag("vertex"))) {
 			validInteraction = true;
 		} else if ((selectionMode == 1 || selectionMode == 4) && (other.CompareTag("edge"))) {
 			validInteraction = true;
@@ -69,30 +77,25 @@ public class SelectionScript : MonoBehaviour {
 
 		if (validInteraction && 
 			((currentHover == null) 
-			|| (other.gameObject.tag == currentHover.tag)
-			|| (other.gameObject.tag == "vertex")
-			|| (other.gameObject.tag == "edge" && currentHover.tag != "vertex") 
-			|| (other.gameObject.tag == "face" && (currentHover.tag != "vertex" && currentHover.tag != "edge"))
-			|| (other.gameObject.tag == "object" && (currentHover.tag != "vertex" && currentHover.tag != "edge" && currentHover.tag != "face"))))
-			{
+				//|| (other.gameObject.tag == currentHover.tag)
+				|| (other.gameObject.tag == "vertex")
+				|| (other.gameObject.tag == "edge" && !(currentHover.tag == "vertex" || currentHover.tag == "edge")) 
+				|| (other.gameObject.tag == "face" && !(currentHover.tag == "vertex" || currentHover.tag == "edge" || currentHover.tag == "face"))
+				|| (other.gameObject.tag == "object" && (currentHover.tag != "vertex" && currentHover.tag != "edge" && currentHover.tag != "face" && currentHover.tag != "object"))))
+		{
 			currentHover = other.gameObject;
 		}
-	}
-
-	void OnTriggerStay (Collider other) {
-		/* currentHover is the game object that this controller should be giving the hover state to.
-		 * Whenever the controller collides with another game object, it might set the new object to be currentHover.
-		 * An object should set its hover state to on only if it is the currentHover.
-		 */
-
 
 		//print (other.name);
 		//print ("test statement");
-		//selectionMode: number between 
+
 		if (validInteraction) {
 
+			print ("Valid interaction.");
+			
 			//IMPORT COLLIDED OBJECT'S STATUS SCRIPT
 			Object_Selection_Status objStatus = GameObject.Find (other.name).GetComponent<Object_Selection_Status> ();
+
 
 			//TURN ON THE HOVER STATE IF THIS OBJECT IS THE CURRENT HOVER OBJECT; ELSE TURN IT OFF
 			if (other.gameObject == currentHover) {

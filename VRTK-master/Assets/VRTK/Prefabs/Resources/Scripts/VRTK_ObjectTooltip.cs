@@ -31,6 +31,8 @@ namespace VRTK
     /// </example>
     public class VRTK_ObjectTooltip : MonoBehaviour
     {
+		private bool toolTipButoon;
+
         [Tooltip("The text that is displayed on the tooltip.")]
         public string displayText;
         [Tooltip("The size of the text that is displayed.")]
@@ -110,6 +112,7 @@ namespace VRTK
         protected virtual void Awake()
         {
             VRTK_SDKManager.instance.AddBehaviourToToggleOnLoadedSetupChange(this);
+
         }
 
         protected virtual void OnEnable()
@@ -130,6 +133,13 @@ namespace VRTK
             {
                 transform.LookAt(headset);
             }
+			/*if (toolTipButton == true) {
+				right_controller.enable ();
+				left_controller.enable ();
+			} else {
+				right_controller.destroy ();
+				right_controller.destroy ();
+			}*/
         }
 
         protected virtual ObjectTooltipEventArgs SetEventPayload(string newText = "")
