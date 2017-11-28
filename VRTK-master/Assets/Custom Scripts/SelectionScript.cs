@@ -35,15 +35,23 @@ public class SelectionScript : MonoBehaviour {
 		//print ("Multi Select Button State: " + multiSelectButton);
 
 		//IF TRIGGER IS PRESSED W/O HOLDING DOWN MULTI SELECT BUTTON, CLEAR SELECTED LIST
+		//should only create a list of deselected objects the first time trigger is pressed outside of object, not subsequent times
+		//when an object is selected and this deselects other objects, those objects should be added to the same list as the selected object
+		//basically every time the trigger is pressed, if this affects the selection state of any object(s), push a list of all object(s) affected onto undo stack
+		//(and the redo stack should be clared as well)
 		if ((indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) && !multiSelectButton) {
 			//print ("TRIGGERED" + triggerCount);
 			triggerCount++;
+			List<GameObject> deselectedItems = new List<GameObject> ();
 			foreach (GameObject selectedObject in selectedObjects) {
 				Object_Selection_Status objStatus = GameObject.Find (selectedObject.name).GetComponent<Object_Selection_Status> ();
 				if (selectedObject != currentHover) {
+					deselectedItems.Add (selectedObject);
 					objStatus.selectionStatus = false;
 				}
 			}
+			GameObject.Find ("LeftController").GetComponent <UndoRedoScript>().undoStack.Push (deselectedItems);
+			GameObject.Find ("LeftController").GetComponent <UndoRedoScript>().redoStack.Clear();
 		}
 		/*
 		if (currentHover != null) {
@@ -91,7 +99,7 @@ public class SelectionScript : MonoBehaviour {
 
 		if (validInteraction) {
 
-			print ("Valid interaction.");
+			//print ("Valid interaction.");
 			
 			//IMPORT COLLIDED OBJECT'S STATUS SCRIPT
 			Object_Selection_Status objStatus = GameObject.Find (other.name).GetComponent<Object_Selection_Status> ();
@@ -116,7 +124,11 @@ public class SelectionScript : MonoBehaviour {
 					objStatus.selectionStatus = false;
 					selectedObjects.Remove (other.gameObject);
 				}
-
+				List<GameObject> item = new List<GameObject> ();
+				item.Add (other.gameObject);
+				//print(item[0]); //works - game object being added to list
+				GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Push (item);
+				GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Clear ();
 			}
 		}
 	}
