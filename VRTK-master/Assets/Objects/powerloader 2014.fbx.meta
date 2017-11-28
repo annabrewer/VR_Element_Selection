@@ -1,0 +1,1303 @@
+fileFormatVersion: 2
+guid: e558fb1d88124fe48ae07b6e00ed6cf7
+timeCreated: 1511833468
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: 3DGeom~1
+    100002: 3DGeom~10
+    100004: 3DGeom~100
+    100006: 3DGeom~100_2
+    100008: 3DGeom~101
+    100010: 3DGeom~101_2
+    100012: 3DGeom~104
+    100014: 3DGeom~104_2
+    100016: 3DGeom~105
+    100018: 3DGeom~105_2
+    100020: 3DGeom~106
+    100022: 3DGeom~106_2
+    100024: 3DGeom~107
+    100026: 3DGeom~107_2
+    100028: 3DGeom~11
+    100030: 3DGeom~112
+    100032: 3DGeom~112_2
+    100034: 3DGeom~113
+    100036: 3DGeom~113_2
+    100038: 3DGeom~116
+    100040: 3DGeom~116_2
+    100042: 3DGeom~117
+    100044: 3DGeom~117_2
+    100046: 3DGeom~118
+    100048: 3DGeom~118_2
+    100050: 3DGeom~119
+    100052: 3DGeom~119_2
+    100054: 3DGeom~12
+    100056: 3DGeom~120
+    100058: 3DGeom~120_2
+    100060: 3DGeom~126
+    100062: 3DGeom~126_2
+    100064: 3DGeom~127
+    100066: 3DGeom~127_2
+    100068: 3DGeom~13
+    100070: 3DGeom~130
+    100072: 3DGeom~130_2
+    100074: 3DGeom~131
+    100076: 3DGeom~131_2
+    100078: 3DGeom~132
+    100080: 3DGeom~132_2
+    100082: 3DGeom~133
+    100084: 3DGeom~133_2
+    100086: 3DGeom~134
+    100088: 3DGeom~134_2
+    100090: 3DGeom~14
+    100092: 3DGeom~140
+    100094: 3DGeom~140_2
+    100096: 3DGeom~141
+    100098: 3DGeom~141_2
+    100100: 3DGeom~142
+    100102: 3DGeom~142_2
+    100104: 3DGeom~146
+    100106: 3DGeom~146_2
+    100108: 3DGeom~148
+    100110: 3DGeom~148_2
+    100112: 3DGeom~15
+    100114: 3DGeom~150
+    100116: 3DGeom~150_2
+    100118: 3DGeom~151
+    100120: 3DGeom~151_2
+    100122: 3DGeom~154
+    100124: 3DGeom~155
+    100126: 3DGeom~156
+    100128: 3DGeom~157
+    100130: 3DGeom~158
+    100132: 3DGeom~159
+    100134: 3DGeom~16
+    100136: 3DGeom~160
+    100138: 3DGeom~161
+    100140: 3DGeom~161_2
+    100142: 3DGeom~162
+    100144: 3DGeom~162_2
+    100146: 3DGeom~163
+    100148: 3DGeom~163_2
+    100150: 3DGeom~164
+    100152: 3DGeom~164_2
+    100154: 3DGeom~169
+    100156: 3DGeom~17
+    100158: 3DGeom~170
+    100160: 3DGeom~171
+    100162: 3DGeom~172
+    100164: 3DGeom~173
+    100166: 3DGeom~174
+    100168: 3DGeom~175
+    100170: 3DGeom~176
+    100172: 3DGeom~177
+    100174: 3DGeom~178
+    100176: 3DGeom~179
+    100178: 3DGeom~18
+    100180: 3DGeom~180
+    100182: 3DGeom~181
+    100184: 3DGeom~182
+    100186: 3DGeom~183
+    100188: 3DGeom~184
+    100190: 3DGeom~185
+    100192: 3DGeom~186
+    100194: 3DGeom~187
+    100196: 3DGeom~188
+    100198: 3DGeom~189
+    100200: 3DGeom~19
+    100202: 3DGeom~190
+    100204: 3DGeom~191
+    100206: 3DGeom~192
+    100208: 3DGeom~193
+    100210: 3DGeom~194
+    100212: 3DGeom~195
+    100214: 3DGeom~196
+    100216: 3DGeom~197
+    100218: 3DGeom~198
+    100220: 3DGeom~199
+    100222: 3DGeom~2
+    100224: 3DGeom~20
+    100226: 3DGeom~200
+    100228: 3DGeom~201
+    100230: 3DGeom~202
+    100232: 3DGeom~203
+    100234: 3DGeom~204
+    100236: 3DGeom~205
+    100238: 3DGeom~206
+    100240: 3DGeom~207
+    100242: 3DGeom~208
+    100244: 3DGeom~209
+    100246: 3DGeom~21
+    100248: 3DGeom~210
+    100250: 3DGeom~210_2
+    100252: 3DGeom~210_3
+    100254: 3DGeom~210_4
+    100256: 3DGeom~211
+    100258: 3DGeom~211_2
+    100260: 3DGeom~211_3
+    100262: 3DGeom~211_4
+    100264: 3DGeom~212
+    100266: 3DGeom~212_2
+    100268: 3DGeom~212_3
+    100270: 3DGeom~212_4
+    100272: 3DGeom~213
+    100274: 3DGeom~213_2
+    100276: 3DGeom~213_3
+    100278: 3DGeom~213_4
+    100280: 3DGeom~214
+    100282: 3DGeom~214_2
+    100284: 3DGeom~214_3
+    100286: 3DGeom~214_4
+    100288: 3DGeom~215
+    100290: 3DGeom~215_2
+    100292: 3DGeom~215_3
+    100294: 3DGeom~215_4
+    100296: 3DGeom~22
+    100298: 3DGeom~23
+    100300: 3DGeom~24
+    100302: 3DGeom~24_2
+    100304: 3DGeom~25
+    100306: 3DGeom~25_2
+    100308: 3DGeom~26
+    100310: 3DGeom~26_2
+    100312: 3DGeom~27
+    100314: 3DGeom~27_2
+    100316: 3DGeom~28
+    100318: 3DGeom~28_2
+    100320: 3DGeom~3
+    100322: 3DGeom~34
+    100324: 3DGeom~35
+    100326: 3DGeom~36
+    100328: 3DGeom~37
+    100330: 3DGeom~38
+    100332: 3DGeom~39
+    100334: 3DGeom~4
+    100336: 3DGeom~40
+    100338: 3DGeom~41
+    100340: 3DGeom~42
+    100342: 3DGeom~42_2
+    100344: 3DGeom~43
+    100346: 3DGeom~43_2
+    100348: 3DGeom~44
+    100350: 3DGeom~44_2
+    100352: 3DGeom~45
+    100354: 3DGeom~45_2
+    100356: 3DGeom~46
+    100358: 3DGeom~46_2
+    100360: 3DGeom~5
+    100362: 3DGeom~52
+    100364: 3DGeom~52_2
+    100366: 3DGeom~52_3
+    100368: 3DGeom~52_4
+    100370: 3DGeom~53
+    100372: 3DGeom~53_2
+    100374: 3DGeom~53_3
+    100376: 3DGeom~53_4
+    100378: 3DGeom~6
+    100380: 3DGeom~60
+    100382: 3DGeom~61
+    100384: 3DGeom~62
+    100386: 3DGeom~63
+    100388: 3DGeom~64
+    100390: 3DGeom~65
+    100392: 3DGeom~66
+    100394: 3DGeom~67
+    100396: 3DGeom~67_2
+    100398: 3DGeom~68
+    100400: 3DGeom~68_2
+    100402: 3DGeom~69
+    100404: 3DGeom~69_2
+    100406: 3DGeom~6_2
+    100408: 3DGeom~70
+    100410: 3DGeom~70_2
+    100412: 3DGeom~71
+    100414: 3DGeom~71_2
+    100416: 3DGeom~77
+    100418: 3DGeom~77_2
+    100420: 3DGeom~78
+    100422: 3DGeom~78_2
+    100424: 3DGeom~79
+    100426: 3DGeom~79_2
+    100428: 3DGeom~8
+    100430: 3DGeom~83
+    100432: 3DGeom~84
+    100434: 3DGeom~85
+    100436: 3DGeom~86
+    100438: 3DGeom~86_2
+    100440: 3DGeom~87
+    100442: 3DGeom~87_2
+    100444: 3DGeom~88
+    100446: 3DGeom~88_2
+    100448: 3DGeom~9
+    100450: 3DGeom~92
+    100452: 3DGeom~92_2
+    100454: 3DGeom~93
+    100456: 3DGeom~93_2
+    100458: 3DGeom~94
+    100460: 3DGeom~94_2
+    100462: 3DGeom~95
+    100464: 3DGeom~95_2
+    100466: arm rest 1.psm:1
+    100468: arm rest 2.psm:1
+    100470: cage.par:1
+    100472: claw 2.par:1
+    100474: claw 2.par:2
+    100476: claw 2.par:3
+    100478: claw 2.par:4
+    100480: Default Camera 1
+    100482: foot pedal.par:1
+    100484: foot pedal.par:2
+    100486: Foot Ram 1.par:1
+    100488: Foot Ram 1.par:2
+    100490: Foot Ram 2.par:1
+    100492: Foot Ram 2.par:2
+    100494: foot.par:1
+    100496: foot.par:2
+    100498: gimbal.par:1
+    100500: gimbal.par:2
+    100502: GRIP 1.par:1
+    100504: GRIP 2.par:1
+    100506: Ground
+    100508: hand.par:1
+    100510: hand.par:2
+    100512: hips.par:1
+    100514: lamp 1.par:1
+    100516: lamp 1.par:2
+    100518: lamp 1.par:3
+    100520: lamp 1.par:4
+    100522: lap belt.par:1
+    100524: Leg Ram 1.par:1
+    100526: Leg Ram 1.par:2
+    100528: Leg Ram 2.par:1
+    100530: Leg Ram 2.par:2
+    100532: Light Dome.par:1
+    100534: loop end 2.par:2
+    100536: loop end 2.par:3
+    100538: loop end.par:1
+    100540: loop end.par:2
+    100542: lower arm - right.par:1
+    100544: lower arm ram.par:2
+    100546: lower arm ram.par:3
+    100548: lower arm.par:1
+    100550: Lower Leg Pad.par:1
+    100552: Lower Leg Pad.par:2
+    100554: Lower Leg.par:1
+    100556: Lower Leg.par:2
+    100558: //RootNode
+    100560: PowerLoader Newt
+    100562: seat back.par:1
+    100564: seat belts.par:1
+    100566: Shoulder ram 1.par:1
+    100568: Shoulder ram 1.par:2
+    100570: Shoulder ram 2.par:1
+    100572: Shoulder ram 2.par:2
+    100574: shoulder.par:1
+    100576: shoulder.par:2
+    100578: spinning lamp.par:1
+    100580: torch 1.par:1
+    100582: torso.par:1
+    100584: upper arm - right.par:1
+    100586: upper arm ram.par:2
+    100588: upper arm ram.par:3
+    100590: upper arm.par:1
+    100592: upper leg joint - right.par:1
+    100594: upper leg joint.par:3
+    100596: weld clamp.par:1
+    100598: wrist.par:1
+    100600: wrist.par:2
+    400000: 3DGeom~1
+    400002: 3DGeom~10
+    400004: 3DGeom~100
+    400006: 3DGeom~100_2
+    400008: 3DGeom~101
+    400010: 3DGeom~101_2
+    400012: 3DGeom~104
+    400014: 3DGeom~104_2
+    400016: 3DGeom~105
+    400018: 3DGeom~105_2
+    400020: 3DGeom~106
+    400022: 3DGeom~106_2
+    400024: 3DGeom~107
+    400026: 3DGeom~107_2
+    400028: 3DGeom~11
+    400030: 3DGeom~112
+    400032: 3DGeom~112_2
+    400034: 3DGeom~113
+    400036: 3DGeom~113_2
+    400038: 3DGeom~116
+    400040: 3DGeom~116_2
+    400042: 3DGeom~117
+    400044: 3DGeom~117_2
+    400046: 3DGeom~118
+    400048: 3DGeom~118_2
+    400050: 3DGeom~119
+    400052: 3DGeom~119_2
+    400054: 3DGeom~12
+    400056: 3DGeom~120
+    400058: 3DGeom~120_2
+    400060: 3DGeom~126
+    400062: 3DGeom~126_2
+    400064: 3DGeom~127
+    400066: 3DGeom~127_2
+    400068: 3DGeom~13
+    400070: 3DGeom~130
+    400072: 3DGeom~130_2
+    400074: 3DGeom~131
+    400076: 3DGeom~131_2
+    400078: 3DGeom~132
+    400080: 3DGeom~132_2
+    400082: 3DGeom~133
+    400084: 3DGeom~133_2
+    400086: 3DGeom~134
+    400088: 3DGeom~134_2
+    400090: 3DGeom~14
+    400092: 3DGeom~140
+    400094: 3DGeom~140_2
+    400096: 3DGeom~141
+    400098: 3DGeom~141_2
+    400100: 3DGeom~142
+    400102: 3DGeom~142_2
+    400104: 3DGeom~146
+    400106: 3DGeom~146_2
+    400108: 3DGeom~148
+    400110: 3DGeom~148_2
+    400112: 3DGeom~15
+    400114: 3DGeom~150
+    400116: 3DGeom~150_2
+    400118: 3DGeom~151
+    400120: 3DGeom~151_2
+    400122: 3DGeom~154
+    400124: 3DGeom~155
+    400126: 3DGeom~156
+    400128: 3DGeom~157
+    400130: 3DGeom~158
+    400132: 3DGeom~159
+    400134: 3DGeom~16
+    400136: 3DGeom~160
+    400138: 3DGeom~161
+    400140: 3DGeom~161_2
+    400142: 3DGeom~162
+    400144: 3DGeom~162_2
+    400146: 3DGeom~163
+    400148: 3DGeom~163_2
+    400150: 3DGeom~164
+    400152: 3DGeom~164_2
+    400154: 3DGeom~169
+    400156: 3DGeom~17
+    400158: 3DGeom~170
+    400160: 3DGeom~171
+    400162: 3DGeom~172
+    400164: 3DGeom~173
+    400166: 3DGeom~174
+    400168: 3DGeom~175
+    400170: 3DGeom~176
+    400172: 3DGeom~177
+    400174: 3DGeom~178
+    400176: 3DGeom~179
+    400178: 3DGeom~18
+    400180: 3DGeom~180
+    400182: 3DGeom~181
+    400184: 3DGeom~182
+    400186: 3DGeom~183
+    400188: 3DGeom~184
+    400190: 3DGeom~185
+    400192: 3DGeom~186
+    400194: 3DGeom~187
+    400196: 3DGeom~188
+    400198: 3DGeom~189
+    400200: 3DGeom~19
+    400202: 3DGeom~190
+    400204: 3DGeom~191
+    400206: 3DGeom~192
+    400208: 3DGeom~193
+    400210: 3DGeom~194
+    400212: 3DGeom~195
+    400214: 3DGeom~196
+    400216: 3DGeom~197
+    400218: 3DGeom~198
+    400220: 3DGeom~199
+    400222: 3DGeom~2
+    400224: 3DGeom~20
+    400226: 3DGeom~200
+    400228: 3DGeom~201
+    400230: 3DGeom~202
+    400232: 3DGeom~203
+    400234: 3DGeom~204
+    400236: 3DGeom~205
+    400238: 3DGeom~206
+    400240: 3DGeom~207
+    400242: 3DGeom~208
+    400244: 3DGeom~209
+    400246: 3DGeom~21
+    400248: 3DGeom~210
+    400250: 3DGeom~210_2
+    400252: 3DGeom~210_3
+    400254: 3DGeom~210_4
+    400256: 3DGeom~211
+    400258: 3DGeom~211_2
+    400260: 3DGeom~211_3
+    400262: 3DGeom~211_4
+    400264: 3DGeom~212
+    400266: 3DGeom~212_2
+    400268: 3DGeom~212_3
+    400270: 3DGeom~212_4
+    400272: 3DGeom~213
+    400274: 3DGeom~213_2
+    400276: 3DGeom~213_3
+    400278: 3DGeom~213_4
+    400280: 3DGeom~214
+    400282: 3DGeom~214_2
+    400284: 3DGeom~214_3
+    400286: 3DGeom~214_4
+    400288: 3DGeom~215
+    400290: 3DGeom~215_2
+    400292: 3DGeom~215_3
+    400294: 3DGeom~215_4
+    400296: 3DGeom~22
+    400298: 3DGeom~23
+    400300: 3DGeom~24
+    400302: 3DGeom~24_2
+    400304: 3DGeom~25
+    400306: 3DGeom~25_2
+    400308: 3DGeom~26
+    400310: 3DGeom~26_2
+    400312: 3DGeom~27
+    400314: 3DGeom~27_2
+    400316: 3DGeom~28
+    400318: 3DGeom~28_2
+    400320: 3DGeom~3
+    400322: 3DGeom~34
+    400324: 3DGeom~35
+    400326: 3DGeom~36
+    400328: 3DGeom~37
+    400330: 3DGeom~38
+    400332: 3DGeom~39
+    400334: 3DGeom~4
+    400336: 3DGeom~40
+    400338: 3DGeom~41
+    400340: 3DGeom~42
+    400342: 3DGeom~42_2
+    400344: 3DGeom~43
+    400346: 3DGeom~43_2
+    400348: 3DGeom~44
+    400350: 3DGeom~44_2
+    400352: 3DGeom~45
+    400354: 3DGeom~45_2
+    400356: 3DGeom~46
+    400358: 3DGeom~46_2
+    400360: 3DGeom~5
+    400362: 3DGeom~52
+    400364: 3DGeom~52_2
+    400366: 3DGeom~52_3
+    400368: 3DGeom~52_4
+    400370: 3DGeom~53
+    400372: 3DGeom~53_2
+    400374: 3DGeom~53_3
+    400376: 3DGeom~53_4
+    400378: 3DGeom~6
+    400380: 3DGeom~60
+    400382: 3DGeom~61
+    400384: 3DGeom~62
+    400386: 3DGeom~63
+    400388: 3DGeom~64
+    400390: 3DGeom~65
+    400392: 3DGeom~66
+    400394: 3DGeom~67
+    400396: 3DGeom~67_2
+    400398: 3DGeom~68
+    400400: 3DGeom~68_2
+    400402: 3DGeom~69
+    400404: 3DGeom~69_2
+    400406: 3DGeom~6_2
+    400408: 3DGeom~70
+    400410: 3DGeom~70_2
+    400412: 3DGeom~71
+    400414: 3DGeom~71_2
+    400416: 3DGeom~77
+    400418: 3DGeom~77_2
+    400420: 3DGeom~78
+    400422: 3DGeom~78_2
+    400424: 3DGeom~79
+    400426: 3DGeom~79_2
+    400428: 3DGeom~8
+    400430: 3DGeom~83
+    400432: 3DGeom~84
+    400434: 3DGeom~85
+    400436: 3DGeom~86
+    400438: 3DGeom~86_2
+    400440: 3DGeom~87
+    400442: 3DGeom~87_2
+    400444: 3DGeom~88
+    400446: 3DGeom~88_2
+    400448: 3DGeom~9
+    400450: 3DGeom~92
+    400452: 3DGeom~92_2
+    400454: 3DGeom~93
+    400456: 3DGeom~93_2
+    400458: 3DGeom~94
+    400460: 3DGeom~94_2
+    400462: 3DGeom~95
+    400464: 3DGeom~95_2
+    400466: arm rest 1.psm:1
+    400468: arm rest 2.psm:1
+    400470: cage.par:1
+    400472: claw 2.par:1
+    400474: claw 2.par:2
+    400476: claw 2.par:3
+    400478: claw 2.par:4
+    400480: Default Camera 1
+    400482: foot pedal.par:1
+    400484: foot pedal.par:2
+    400486: Foot Ram 1.par:1
+    400488: Foot Ram 1.par:2
+    400490: Foot Ram 2.par:1
+    400492: Foot Ram 2.par:2
+    400494: foot.par:1
+    400496: foot.par:2
+    400498: gimbal.par:1
+    400500: gimbal.par:2
+    400502: GRIP 1.par:1
+    400504: GRIP 2.par:1
+    400506: Ground
+    400508: hand.par:1
+    400510: hand.par:2
+    400512: hips.par:1
+    400514: lamp 1.par:1
+    400516: lamp 1.par:2
+    400518: lamp 1.par:3
+    400520: lamp 1.par:4
+    400522: lap belt.par:1
+    400524: Leg Ram 1.par:1
+    400526: Leg Ram 1.par:2
+    400528: Leg Ram 2.par:1
+    400530: Leg Ram 2.par:2
+    400532: Light Dome.par:1
+    400534: loop end 2.par:2
+    400536: loop end 2.par:3
+    400538: loop end.par:1
+    400540: loop end.par:2
+    400542: lower arm - right.par:1
+    400544: lower arm ram.par:2
+    400546: lower arm ram.par:3
+    400548: lower arm.par:1
+    400550: Lower Leg Pad.par:1
+    400552: Lower Leg Pad.par:2
+    400554: Lower Leg.par:1
+    400556: Lower Leg.par:2
+    400558: //RootNode
+    400560: PowerLoader Newt
+    400562: seat back.par:1
+    400564: seat belts.par:1
+    400566: Shoulder ram 1.par:1
+    400568: Shoulder ram 1.par:2
+    400570: Shoulder ram 2.par:1
+    400572: Shoulder ram 2.par:2
+    400574: shoulder.par:1
+    400576: shoulder.par:2
+    400578: spinning lamp.par:1
+    400580: torch 1.par:1
+    400582: torso.par:1
+    400584: upper arm - right.par:1
+    400586: upper arm ram.par:2
+    400588: upper arm ram.par:3
+    400590: upper arm.par:1
+    400592: upper leg joint - right.par:1
+    400594: upper leg joint.par:3
+    400596: weld clamp.par:1
+    400598: wrist.par:1
+    400600: wrist.par:2
+    2000000: Default Camera 1
+    2300000: 3DGeom~1
+    2300002: 3DGeom~10
+    2300004: 3DGeom~100
+    2300006: 3DGeom~100_2
+    2300008: 3DGeom~101
+    2300010: 3DGeom~101_2
+    2300012: 3DGeom~104
+    2300014: 3DGeom~104_2
+    2300016: 3DGeom~105
+    2300018: 3DGeom~105_2
+    2300020: 3DGeom~106
+    2300022: 3DGeom~106_2
+    2300024: 3DGeom~107
+    2300026: 3DGeom~107_2
+    2300028: 3DGeom~11
+    2300030: 3DGeom~112
+    2300032: 3DGeom~112_2
+    2300034: 3DGeom~113
+    2300036: 3DGeom~113_2
+    2300038: 3DGeom~116
+    2300040: 3DGeom~116_2
+    2300042: 3DGeom~117
+    2300044: 3DGeom~117_2
+    2300046: 3DGeom~118
+    2300048: 3DGeom~118_2
+    2300050: 3DGeom~119
+    2300052: 3DGeom~119_2
+    2300054: 3DGeom~12
+    2300056: 3DGeom~120
+    2300058: 3DGeom~120_2
+    2300060: 3DGeom~126
+    2300062: 3DGeom~126_2
+    2300064: 3DGeom~127
+    2300066: 3DGeom~127_2
+    2300068: 3DGeom~13
+    2300070: 3DGeom~130
+    2300072: 3DGeom~130_2
+    2300074: 3DGeom~131
+    2300076: 3DGeom~131_2
+    2300078: 3DGeom~132
+    2300080: 3DGeom~132_2
+    2300082: 3DGeom~133
+    2300084: 3DGeom~133_2
+    2300086: 3DGeom~134
+    2300088: 3DGeom~134_2
+    2300090: 3DGeom~14
+    2300092: 3DGeom~140
+    2300094: 3DGeom~140_2
+    2300096: 3DGeom~141
+    2300098: 3DGeom~141_2
+    2300100: 3DGeom~142
+    2300102: 3DGeom~142_2
+    2300104: 3DGeom~146
+    2300106: 3DGeom~146_2
+    2300108: 3DGeom~148
+    2300110: 3DGeom~148_2
+    2300112: 3DGeom~15
+    2300114: 3DGeom~150
+    2300116: 3DGeom~150_2
+    2300118: 3DGeom~151
+    2300120: 3DGeom~151_2
+    2300122: 3DGeom~154
+    2300124: 3DGeom~155
+    2300126: 3DGeom~156
+    2300128: 3DGeom~157
+    2300130: 3DGeom~158
+    2300132: 3DGeom~159
+    2300134: 3DGeom~16
+    2300136: 3DGeom~160
+    2300138: 3DGeom~161
+    2300140: 3DGeom~161_2
+    2300142: 3DGeom~162
+    2300144: 3DGeom~162_2
+    2300146: 3DGeom~163
+    2300148: 3DGeom~163_2
+    2300150: 3DGeom~164
+    2300152: 3DGeom~164_2
+    2300154: 3DGeom~169
+    2300156: 3DGeom~17
+    2300158: 3DGeom~170
+    2300160: 3DGeom~171
+    2300162: 3DGeom~172
+    2300164: 3DGeom~173
+    2300166: 3DGeom~174
+    2300168: 3DGeom~175
+    2300170: 3DGeom~176
+    2300172: 3DGeom~177
+    2300174: 3DGeom~178
+    2300176: 3DGeom~179
+    2300178: 3DGeom~18
+    2300180: 3DGeom~180
+    2300182: 3DGeom~181
+    2300184: 3DGeom~182
+    2300186: 3DGeom~183
+    2300188: 3DGeom~184
+    2300190: 3DGeom~185
+    2300192: 3DGeom~186
+    2300194: 3DGeom~187
+    2300196: 3DGeom~188
+    2300198: 3DGeom~189
+    2300200: 3DGeom~19
+    2300202: 3DGeom~190
+    2300204: 3DGeom~191
+    2300206: 3DGeom~192
+    2300208: 3DGeom~193
+    2300210: 3DGeom~194
+    2300212: 3DGeom~195
+    2300214: 3DGeom~196
+    2300216: 3DGeom~197
+    2300218: 3DGeom~198
+    2300220: 3DGeom~199
+    2300222: 3DGeom~2
+    2300224: 3DGeom~20
+    2300226: 3DGeom~200
+    2300228: 3DGeom~201
+    2300230: 3DGeom~202
+    2300232: 3DGeom~203
+    2300234: 3DGeom~204
+    2300236: 3DGeom~205
+    2300238: 3DGeom~206
+    2300240: 3DGeom~207
+    2300242: 3DGeom~208
+    2300244: 3DGeom~209
+    2300246: 3DGeom~21
+    2300248: 3DGeom~210
+    2300250: 3DGeom~210_2
+    2300252: 3DGeom~210_3
+    2300254: 3DGeom~210_4
+    2300256: 3DGeom~211
+    2300258: 3DGeom~211_2
+    2300260: 3DGeom~211_3
+    2300262: 3DGeom~211_4
+    2300264: 3DGeom~212
+    2300266: 3DGeom~212_2
+    2300268: 3DGeom~212_3
+    2300270: 3DGeom~212_4
+    2300272: 3DGeom~213
+    2300274: 3DGeom~213_2
+    2300276: 3DGeom~213_3
+    2300278: 3DGeom~213_4
+    2300280: 3DGeom~214
+    2300282: 3DGeom~214_2
+    2300284: 3DGeom~214_3
+    2300286: 3DGeom~214_4
+    2300288: 3DGeom~215
+    2300290: 3DGeom~215_2
+    2300292: 3DGeom~215_3
+    2300294: 3DGeom~215_4
+    2300296: 3DGeom~22
+    2300298: 3DGeom~23
+    2300300: 3DGeom~24
+    2300302: 3DGeom~24_2
+    2300304: 3DGeom~25
+    2300306: 3DGeom~25_2
+    2300308: 3DGeom~26
+    2300310: 3DGeom~26_2
+    2300312: 3DGeom~27
+    2300314: 3DGeom~27_2
+    2300316: 3DGeom~28
+    2300318: 3DGeom~28_2
+    2300320: 3DGeom~3
+    2300322: 3DGeom~34
+    2300324: 3DGeom~35
+    2300326: 3DGeom~36
+    2300328: 3DGeom~37
+    2300330: 3DGeom~38
+    2300332: 3DGeom~39
+    2300334: 3DGeom~4
+    2300336: 3DGeom~40
+    2300338: 3DGeom~41
+    2300340: 3DGeom~42
+    2300342: 3DGeom~42_2
+    2300344: 3DGeom~43
+    2300346: 3DGeom~43_2
+    2300348: 3DGeom~44
+    2300350: 3DGeom~44_2
+    2300352: 3DGeom~45
+    2300354: 3DGeom~45_2
+    2300356: 3DGeom~46
+    2300358: 3DGeom~46_2
+    2300360: 3DGeom~5
+    2300362: 3DGeom~52
+    2300364: 3DGeom~52_2
+    2300366: 3DGeom~52_3
+    2300368: 3DGeom~52_4
+    2300370: 3DGeom~53
+    2300372: 3DGeom~53_2
+    2300374: 3DGeom~53_3
+    2300376: 3DGeom~53_4
+    2300378: 3DGeom~6
+    2300380: 3DGeom~60
+    2300382: 3DGeom~61
+    2300384: 3DGeom~62
+    2300386: 3DGeom~63
+    2300388: 3DGeom~64
+    2300390: 3DGeom~65
+    2300392: 3DGeom~66
+    2300394: 3DGeom~67
+    2300396: 3DGeom~67_2
+    2300398: 3DGeom~68
+    2300400: 3DGeom~68_2
+    2300402: 3DGeom~69
+    2300404: 3DGeom~69_2
+    2300406: 3DGeom~6_2
+    2300408: 3DGeom~70
+    2300410: 3DGeom~70_2
+    2300412: 3DGeom~71
+    2300414: 3DGeom~71_2
+    2300416: 3DGeom~77
+    2300418: 3DGeom~77_2
+    2300420: 3DGeom~78
+    2300422: 3DGeom~78_2
+    2300424: 3DGeom~79
+    2300426: 3DGeom~79_2
+    2300428: 3DGeom~8
+    2300430: 3DGeom~83
+    2300432: 3DGeom~84
+    2300434: 3DGeom~85
+    2300436: 3DGeom~86
+    2300438: 3DGeom~86_2
+    2300440: 3DGeom~87
+    2300442: 3DGeom~87_2
+    2300444: 3DGeom~88
+    2300446: 3DGeom~88_2
+    2300448: 3DGeom~9
+    2300450: 3DGeom~92
+    2300452: 3DGeom~92_2
+    2300454: 3DGeom~93
+    2300456: 3DGeom~93_2
+    2300458: 3DGeom~94
+    2300460: 3DGeom~94_2
+    2300462: 3DGeom~95
+    2300464: 3DGeom~95_2
+    3300000: 3DGeom~1
+    3300002: 3DGeom~10
+    3300004: 3DGeom~100
+    3300006: 3DGeom~100_2
+    3300008: 3DGeom~101
+    3300010: 3DGeom~101_2
+    3300012: 3DGeom~104
+    3300014: 3DGeom~104_2
+    3300016: 3DGeom~105
+    3300018: 3DGeom~105_2
+    3300020: 3DGeom~106
+    3300022: 3DGeom~106_2
+    3300024: 3DGeom~107
+    3300026: 3DGeom~107_2
+    3300028: 3DGeom~11
+    3300030: 3DGeom~112
+    3300032: 3DGeom~112_2
+    3300034: 3DGeom~113
+    3300036: 3DGeom~113_2
+    3300038: 3DGeom~116
+    3300040: 3DGeom~116_2
+    3300042: 3DGeom~117
+    3300044: 3DGeom~117_2
+    3300046: 3DGeom~118
+    3300048: 3DGeom~118_2
+    3300050: 3DGeom~119
+    3300052: 3DGeom~119_2
+    3300054: 3DGeom~12
+    3300056: 3DGeom~120
+    3300058: 3DGeom~120_2
+    3300060: 3DGeom~126
+    3300062: 3DGeom~126_2
+    3300064: 3DGeom~127
+    3300066: 3DGeom~127_2
+    3300068: 3DGeom~13
+    3300070: 3DGeom~130
+    3300072: 3DGeom~130_2
+    3300074: 3DGeom~131
+    3300076: 3DGeom~131_2
+    3300078: 3DGeom~132
+    3300080: 3DGeom~132_2
+    3300082: 3DGeom~133
+    3300084: 3DGeom~133_2
+    3300086: 3DGeom~134
+    3300088: 3DGeom~134_2
+    3300090: 3DGeom~14
+    3300092: 3DGeom~140
+    3300094: 3DGeom~140_2
+    3300096: 3DGeom~141
+    3300098: 3DGeom~141_2
+    3300100: 3DGeom~142
+    3300102: 3DGeom~142_2
+    3300104: 3DGeom~146
+    3300106: 3DGeom~146_2
+    3300108: 3DGeom~148
+    3300110: 3DGeom~148_2
+    3300112: 3DGeom~15
+    3300114: 3DGeom~150
+    3300116: 3DGeom~150_2
+    3300118: 3DGeom~151
+    3300120: 3DGeom~151_2
+    3300122: 3DGeom~154
+    3300124: 3DGeom~155
+    3300126: 3DGeom~156
+    3300128: 3DGeom~157
+    3300130: 3DGeom~158
+    3300132: 3DGeom~159
+    3300134: 3DGeom~16
+    3300136: 3DGeom~160
+    3300138: 3DGeom~161
+    3300140: 3DGeom~161_2
+    3300142: 3DGeom~162
+    3300144: 3DGeom~162_2
+    3300146: 3DGeom~163
+    3300148: 3DGeom~163_2
+    3300150: 3DGeom~164
+    3300152: 3DGeom~164_2
+    3300154: 3DGeom~169
+    3300156: 3DGeom~17
+    3300158: 3DGeom~170
+    3300160: 3DGeom~171
+    3300162: 3DGeom~172
+    3300164: 3DGeom~173
+    3300166: 3DGeom~174
+    3300168: 3DGeom~175
+    3300170: 3DGeom~176
+    3300172: 3DGeom~177
+    3300174: 3DGeom~178
+    3300176: 3DGeom~179
+    3300178: 3DGeom~18
+    3300180: 3DGeom~180
+    3300182: 3DGeom~181
+    3300184: 3DGeom~182
+    3300186: 3DGeom~183
+    3300188: 3DGeom~184
+    3300190: 3DGeom~185
+    3300192: 3DGeom~186
+    3300194: 3DGeom~187
+    3300196: 3DGeom~188
+    3300198: 3DGeom~189
+    3300200: 3DGeom~19
+    3300202: 3DGeom~190
+    3300204: 3DGeom~191
+    3300206: 3DGeom~192
+    3300208: 3DGeom~193
+    3300210: 3DGeom~194
+    3300212: 3DGeom~195
+    3300214: 3DGeom~196
+    3300216: 3DGeom~197
+    3300218: 3DGeom~198
+    3300220: 3DGeom~199
+    3300222: 3DGeom~2
+    3300224: 3DGeom~20
+    3300226: 3DGeom~200
+    3300228: 3DGeom~201
+    3300230: 3DGeom~202
+    3300232: 3DGeom~203
+    3300234: 3DGeom~204
+    3300236: 3DGeom~205
+    3300238: 3DGeom~206
+    3300240: 3DGeom~207
+    3300242: 3DGeom~208
+    3300244: 3DGeom~209
+    3300246: 3DGeom~21
+    3300248: 3DGeom~210
+    3300250: 3DGeom~210_2
+    3300252: 3DGeom~210_3
+    3300254: 3DGeom~210_4
+    3300256: 3DGeom~211
+    3300258: 3DGeom~211_2
+    3300260: 3DGeom~211_3
+    3300262: 3DGeom~211_4
+    3300264: 3DGeom~212
+    3300266: 3DGeom~212_2
+    3300268: 3DGeom~212_3
+    3300270: 3DGeom~212_4
+    3300272: 3DGeom~213
+    3300274: 3DGeom~213_2
+    3300276: 3DGeom~213_3
+    3300278: 3DGeom~213_4
+    3300280: 3DGeom~214
+    3300282: 3DGeom~214_2
+    3300284: 3DGeom~214_3
+    3300286: 3DGeom~214_4
+    3300288: 3DGeom~215
+    3300290: 3DGeom~215_2
+    3300292: 3DGeom~215_3
+    3300294: 3DGeom~215_4
+    3300296: 3DGeom~22
+    3300298: 3DGeom~23
+    3300300: 3DGeom~24
+    3300302: 3DGeom~24_2
+    3300304: 3DGeom~25
+    3300306: 3DGeom~25_2
+    3300308: 3DGeom~26
+    3300310: 3DGeom~26_2
+    3300312: 3DGeom~27
+    3300314: 3DGeom~27_2
+    3300316: 3DGeom~28
+    3300318: 3DGeom~28_2
+    3300320: 3DGeom~3
+    3300322: 3DGeom~34
+    3300324: 3DGeom~35
+    3300326: 3DGeom~36
+    3300328: 3DGeom~37
+    3300330: 3DGeom~38
+    3300332: 3DGeom~39
+    3300334: 3DGeom~4
+    3300336: 3DGeom~40
+    3300338: 3DGeom~41
+    3300340: 3DGeom~42
+    3300342: 3DGeom~42_2
+    3300344: 3DGeom~43
+    3300346: 3DGeom~43_2
+    3300348: 3DGeom~44
+    3300350: 3DGeom~44_2
+    3300352: 3DGeom~45
+    3300354: 3DGeom~45_2
+    3300356: 3DGeom~46
+    3300358: 3DGeom~46_2
+    3300360: 3DGeom~5
+    3300362: 3DGeom~52
+    3300364: 3DGeom~52_2
+    3300366: 3DGeom~52_3
+    3300368: 3DGeom~52_4
+    3300370: 3DGeom~53
+    3300372: 3DGeom~53_2
+    3300374: 3DGeom~53_3
+    3300376: 3DGeom~53_4
+    3300378: 3DGeom~6
+    3300380: 3DGeom~60
+    3300382: 3DGeom~61
+    3300384: 3DGeom~62
+    3300386: 3DGeom~63
+    3300388: 3DGeom~64
+    3300390: 3DGeom~65
+    3300392: 3DGeom~66
+    3300394: 3DGeom~67
+    3300396: 3DGeom~67_2
+    3300398: 3DGeom~68
+    3300400: 3DGeom~68_2
+    3300402: 3DGeom~69
+    3300404: 3DGeom~69_2
+    3300406: 3DGeom~6_2
+    3300408: 3DGeom~70
+    3300410: 3DGeom~70_2
+    3300412: 3DGeom~71
+    3300414: 3DGeom~71_2
+    3300416: 3DGeom~77
+    3300418: 3DGeom~77_2
+    3300420: 3DGeom~78
+    3300422: 3DGeom~78_2
+    3300424: 3DGeom~79
+    3300426: 3DGeom~79_2
+    3300428: 3DGeom~8
+    3300430: 3DGeom~83
+    3300432: 3DGeom~84
+    3300434: 3DGeom~85
+    3300436: 3DGeom~86
+    3300438: 3DGeom~86_2
+    3300440: 3DGeom~87
+    3300442: 3DGeom~87_2
+    3300444: 3DGeom~88
+    3300446: 3DGeom~88_2
+    3300448: 3DGeom~9
+    3300450: 3DGeom~92
+    3300452: 3DGeom~92_2
+    3300454: 3DGeom~93
+    3300456: 3DGeom~93_2
+    3300458: 3DGeom~94
+    3300460: 3DGeom~94_2
+    3300462: 3DGeom~95
+    3300464: 3DGeom~95_2
+    4300000: 3DGeom~1
+    4300002: 3DGeom~2
+    4300004: 3DGeom~3
+    4300006: 3DGeom~4
+    4300008: 3DGeom~5
+    4300010: 3DGeom~6
+    4300012: 3DGeom~8
+    4300014: 3DGeom~9
+    4300016: 3DGeom~10
+    4300018: 3DGeom~11
+    4300020: 3DGeom~12
+    4300022: 3DGeom~13
+    4300024: 3DGeom~14
+    4300026: 3DGeom~15
+    4300028: 3DGeom~16
+    4300030: 3DGeom~17
+    4300032: 3DGeom~18
+    4300034: 3DGeom~19
+    4300036: 3DGeom~20
+    4300038: 3DGeom~21
+    4300040: 3DGeom~22
+    4300042: 3DGeom~23
+    4300044: 3DGeom~24
+    4300046: 3DGeom~25
+    4300048: 3DGeom~26
+    4300050: 3DGeom~27
+    4300052: 3DGeom~28
+    4300054: 3DGeom~34
+    4300056: 3DGeom~35
+    4300058: 3DGeom~36
+    4300060: 3DGeom~37
+    4300062: 3DGeom~38
+    4300064: 3DGeom~39
+    4300066: 3DGeom~40
+    4300068: 3DGeom~41
+    4300070: 3DGeom~42
+    4300072: 3DGeom~43
+    4300074: 3DGeom~44
+    4300076: 3DGeom~45
+    4300078: 3DGeom~46
+    4300080: 3DGeom~52
+    4300082: 3DGeom~53
+    4300084: 3DGeom~60
+    4300086: 3DGeom~61
+    4300088: 3DGeom~62
+    4300090: 3DGeom~63
+    4300092: 3DGeom~64
+    4300094: 3DGeom~65
+    4300096: 3DGeom~66
+    4300098: 3DGeom~67
+    4300100: 3DGeom~68
+    4300102: 3DGeom~69
+    4300104: 3DGeom~70
+    4300106: 3DGeom~71
+    4300108: 3DGeom~77
+    4300110: 3DGeom~78
+    4300112: 3DGeom~79
+    4300114: 3DGeom~83
+    4300116: 3DGeom~84
+    4300118: 3DGeom~85
+    4300120: 3DGeom~86
+    4300122: 3DGeom~87
+    4300124: 3DGeom~88
+    4300126: 3DGeom~92
+    4300128: 3DGeom~93
+    4300130: 3DGeom~94
+    4300132: 3DGeom~95
+    4300134: 3DGeom~100
+    4300136: 3DGeom~101
+    4300138: 3DGeom~104
+    4300140: 3DGeom~105
+    4300142: 3DGeom~106
+    4300144: 3DGeom~107
+    4300146: 3DGeom~112
+    4300148: 3DGeom~113
+    4300150: 3DGeom~116
+    4300152: 3DGeom~117
+    4300154: 3DGeom~118
+    4300156: 3DGeom~119
+    4300158: 3DGeom~120
+    4300160: 3DGeom~126
+    4300162: 3DGeom~127
+    4300164: 3DGeom~130
+    4300166: 3DGeom~131
+    4300168: 3DGeom~132
+    4300170: 3DGeom~133
+    4300172: 3DGeom~134
+    4300174: 3DGeom~140
+    4300176: 3DGeom~141
+    4300178: 3DGeom~142
+    4300180: 3DGeom~146
+    4300182: 3DGeom~148
+    4300184: 3DGeom~150
+    4300186: 3DGeom~151
+    4300188: 3DGeom~154
+    4300190: 3DGeom~155
+    4300192: 3DGeom~156
+    4300194: 3DGeom~157
+    4300196: 3DGeom~158
+    4300198: 3DGeom~159
+    4300200: 3DGeom~160
+    4300202: 3DGeom~161
+    4300204: 3DGeom~162
+    4300206: 3DGeom~163
+    4300208: 3DGeom~164
+    4300210: 3DGeom~169
+    4300212: 3DGeom~170
+    4300214: 3DGeom~171
+    4300216: 3DGeom~172
+    4300218: 3DGeom~173
+    4300220: 3DGeom~174
+    4300222: 3DGeom~175
+    4300224: 3DGeom~176
+    4300226: 3DGeom~177
+    4300228: 3DGeom~178
+    4300230: 3DGeom~179
+    4300232: 3DGeom~180
+    4300234: 3DGeom~181
+    4300236: 3DGeom~182
+    4300238: 3DGeom~183
+    4300240: 3DGeom~184
+    4300242: 3DGeom~185
+    4300244: 3DGeom~186
+    4300246: 3DGeom~187
+    4300248: 3DGeom~188
+    4300250: 3DGeom~189
+    4300252: 3DGeom~190
+    4300254: 3DGeom~191
+    4300256: 3DGeom~192
+    4300258: 3DGeom~193
+    4300260: 3DGeom~194
+    4300262: 3DGeom~195
+    4300264: 3DGeom~196
+    4300266: 3DGeom~197
+    4300268: 3DGeom~198
+    4300270: 3DGeom~199
+    4300272: 3DGeom~200
+    4300274: 3DGeom~201
+    4300276: 3DGeom~202
+    4300278: 3DGeom~203
+    4300280: 3DGeom~204
+    4300282: 3DGeom~205
+    4300284: 3DGeom~206
+    4300286: 3DGeom~207
+    4300288: 3DGeom~208
+    4300290: 3DGeom~209
+    4300292: 3DGeom~210
+    4300294: 3DGeom~211
+    4300296: 3DGeom~212
+    4300298: 3DGeom~213
+    4300300: 3DGeom~214
+    4300302: 3DGeom~215
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
