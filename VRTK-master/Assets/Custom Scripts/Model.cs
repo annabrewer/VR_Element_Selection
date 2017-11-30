@@ -29,8 +29,8 @@ public class Model : MonoBehaviour {
 		innerCube.transform.parent = this.gameObject.transform;
 		outerCube.transform.parent = this.gameObject.transform;
 
-		innerCube.transform.position = new Vector3(0, 1, size * 2);
-		outerCube.transform.position = new Vector3(0, 1, size * 2);
+		innerCube.transform.position = new Vector3(1.5f, 1, size * (-0.5f));
+		outerCube.transform.position = new Vector3(1.5f, 1, size * (-0.5f));
 
 		innerCube.transform.eulerAngles = new Vector3(45, 45, 45);
 

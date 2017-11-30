@@ -8,6 +8,8 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 	public GameObject CenterEyeAnchor;
 	public GameObject leftHandAnchor;
 	public GameObject rightHandAnchor;
+	public float transparencyDist = 0.9f;
+	public float transparencyVal = 0.25f;
 
 	private float rightDist;
 	private float leftDist;
@@ -27,8 +29,8 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 		Ray camToLeft = new Ray (cameraPos, lPos - cameraPos);
 
 		//CALCULATE DISTANCE BETWEEN CAMERA AND CONTROLLERS
-		rightDist = (rPos - cameraPos).magnitude * 0.8f;
-		leftDist = (lPos - cameraPos).magnitude * 0.8f;
+		rightDist = (rPos - cameraPos).magnitude * transparencyDist;
+		leftDist = (lPos - cameraPos).magnitude * transparencyDist;
 
 		//RAYCAST PREP
 		RaycastHit[] hitsRight;
@@ -70,7 +72,7 @@ public class Blocking_Object_Transparency : MonoBehaviour {
 					hitMat.EnableKeyword ("_ALPHABLEND_ON");
 					hitMat.DisableKeyword ("_ALPHAPREMULTIPLY_ON");
 					hitMat.renderQueue = 3000;
-					ChangeAlpha (hitMat, 0.5f);
+					ChangeAlpha (hitMat, transparencyVal);
 					blockingObjects.Add (hitObject);
 					//print ("Object added.");
 					//print ("Blocking objects: " + blockingObjects);
