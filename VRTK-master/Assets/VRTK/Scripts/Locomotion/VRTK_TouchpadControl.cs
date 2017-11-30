@@ -43,6 +43,7 @@ namespace VRTK
             ModifierButtonActive();
             if (OutsideDeadzone(currentAxis.x, axisDeadzone.x) || currentAxis.x == 0f)
             {
+				print("Axis Changed!!!!!!");
                 OnXAxisChanged(SetEventArguements(directionDevice.right, currentAxis.x, axisDeadzone.x));
             }
 
