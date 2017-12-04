@@ -17,7 +17,10 @@ public class SelectionScript : MonoBehaviour {
 	private bool validInteraction;
 
 	private int triggerCount = 0;
+	void Start () {
+		
 
+	}
 	//use fixed update to sync w/ ontrigger
 	void FixedUpdate () {
 		oldIndexTriggerState = indexTriggerState;
@@ -39,25 +42,38 @@ public class SelectionScript : MonoBehaviour {
 		//when an object is selected and this deselects other objects, those objects should be added to the same list as the selected object
 		//basically every time the trigger is pressed, if this affects the selection state of any object(s), push a list of all object(s) affected onto undo stack
 		//(and the redo stack should be clared as well)
-		if ((indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) && !multiSelectButton) {
-			//print ("TRIGGERED" + triggerCount);
-			triggerCount++;
-			List<GameObject> deselectedItems = new List<GameObject> ();
-			foreach (GameObject selectedObject in selectedObjects) {
-				Object_Selection_Status objStatus = GameObject.Find (selectedObject.name).GetComponent<Object_Selection_Status> ();
-				if (selectedObject != currentHover) {
-					deselectedItems.Add (selectedObject);
-					objStatus.selectionStatus = false;
+
+		if (indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) {
+			List<GameObject> changed = new List<GameObject> ();
+			//add current hover
+			print(currentHover.name);
+			if (currentHover != null) {
+				changed.Add (currentHover);
+			}
+			//if multi select is off, add all other currently selected objects and deselect them
+			if (!multiSelectButton) {
+				
+				foreach (GameObject selectedObject in selectedObjects) {
+					Object_Selection_Status objStatus = GameObject.Find (selectedObject.name).GetComponent<Object_Selection_Status> ();
+					if (selectedObject != currentHover) {
+						selectedObjects.Remove (selectedObject);
+						print(selectedObject.name);
+						objStatus.selectionStatus = false;
+						changed.Add (selectedObject);
+					}
 				}
 			}
-			GameObject.Find ("LeftController").GetComponent <UndoRedoScript>().undoStack.Push (deselectedItems);
-			GameObject.Find ("LeftController").GetComponent <UndoRedoScript>().redoStack.Clear();
-		}
+			GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Push (changed);
+			GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Clear ();
+			//print ("TRIGGERED" + triggerCount);
+			//triggerCount++;
+
 		/*
 		if (currentHover != null) {
 			print ("Currently hovering on: " + currentHover.name);
 		}
 		*/
+		}
 	}
 
 	void OnTriggerEnter (Collider other) {
@@ -115,6 +131,19 @@ public class SelectionScript : MonoBehaviour {
 
 			//TOGGLE SELECTION STATE WHEN TRIGGER PRESSED
 			if ((indexTriggerState >= 0.8f && oldIndexTriggerState < 0.8f) && (other.gameObject == currentHover)) {
+				//print ("STATUS CHANGE");
+				/*if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Count == 0) {
+					print ("BEFORE: Undo stack is empty");
+				} else {
+					print ("BEFORE: Undo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Peek ());
+				}
+
+				if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Count == 0) {
+					print ("BEFORE: Redo stack is empty");
+				} else {
+					print ("BEFORE: Redo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Peek ());
+				}*/
+
 				if (!objStatus.selectionStatus) {
 					print ("Object selected: " + other.name);
 					objStatus.selectionStatus = true;
@@ -124,11 +153,24 @@ public class SelectionScript : MonoBehaviour {
 					objStatus.selectionStatus = false;
 					selectedObjects.Remove (other.gameObject);
 				}
-				List<GameObject> item = new List<GameObject> ();
+				/*List<GameObject> item = new List<GameObject> ();
 				item.Add (other.gameObject);
 				//print(item[0]); //works - game object being added to list
+				print("whoa there buddy");
 				GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Push (item);
 				GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Clear ();
+
+				if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Count == 0) {
+					print ("AFTER: Undo stack is empty");
+				} else {
+					print ("AFTER: Undo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Peek ());
+				}
+
+				if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Count == 0) {
+					print ("AFTER: Redo stack is empty");
+				} else {
+					print ("AFTER: Redo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Peek ());
+				}*/
 			}
 		}
 	}

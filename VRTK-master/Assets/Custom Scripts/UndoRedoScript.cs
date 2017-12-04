@@ -20,6 +20,18 @@ public class UndoRedoScript : MonoBehaviour
 		undoStack = new Stack<List<GameObject>>();
 		redoStack = new Stack<List<GameObject>>();
 
+		/*if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Count == 0) {
+			print ("BEFORE: Undo stack is empty");
+		} else {
+			print ("BEFORE: Undo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().undoStack.Peek ());
+		}
+
+		if (GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Count == 0) {
+			print ("BEFORE: Redo stack is empty");
+		} else {
+			print ("BEFORE: Redo stack: " + GameObject.Find ("LeftController").GetComponent <UndoRedoScript> ().redoStack.Peek ());
+		}*/
+
     }
 
     void Update ()
@@ -29,21 +41,63 @@ public class UndoRedoScript : MonoBehaviour
 		thumbstickPos = OVRInput.Get (OVRInput.Axis2D.PrimaryThumbstick, controller);
 		if (thumbstickPos.x < -0.5f && oldThumbstickPos.x >= -0.5f)
         {
-			print ("Undo");
-			if (undoStack.Count == 0) {
-				print ("the stack is empty");
+			print ("UNDO");
+			if (redoStack.Count == 0) {
+				print ("BEFORE: Redo stack is empty");
 			} else {
-				print (undoStack.Peek ());
+				print ("BEFORE: Redo stack: " + redoStack.Peek ());
+			}
+				
+			if (undoStack.Count == 0) {
+				print ("BEFORE: Undo stack is empty");
+			} else {
+				print ("BEFORE: Undo stack: "+ undoStack.Peek());
 				Undo ();
+			}
+
+			if (undoStack.Count == 0) {
+				print ("AFTER: Undo stack is empty");
+			} else {
+				print ("AFTER: Undo stack: " + undoStack.Peek ());
+			}
+
+			if (redoStack.Count == 0) {
+				print ("AFTER: Redo stack is empty");
+			} else {
+				print ("AFTER: Redo stack: " + redoStack.Peek ());
 			}
 
         }
 		else if (thumbstickPos.x > 0.5f && oldThumbstickPos.x <= 0.5f)
         {
-			print ("Redo");
-			print(redoStack.Peek());
-			Redo();
+			print ("REDO");
+			if (undoStack.Count == 0) {
+				print ("BEFORE: Undo stack is empty");
+			} else {
+				print ("BEFORE: Undo stack: " + undoStack.Peek ());
+			}
+
+			if (redoStack.Count == 0) {
+				print ("BEFORE: Redo stack is empty");
+			} else {
+				print ("BEFORE: Redo stack: "+ redoStack.Peek());
+				Redo ();
+			}
+
+			if (undoStack.Count == 0) {
+				print ("AFTER: Undo stack is empty");
+			} else {
+				print ("AFTER: Undo stack: " + undoStack.Peek ());
+			}
+
+			if (redoStack.Count == 0) {
+				print ("AFTER: Redo stack is empty");
+			} else {
+				print ("AFTER: Redo stack: " + redoStack.Peek ());
+			}
         }
+
+
     }
 
     //dominant hand controller:
@@ -56,6 +110,7 @@ public class UndoRedoScript : MonoBehaviour
         redoStack.Push(items);
         foreach (GameObject g in items)
         {
+			print (g.name);
 			g.GetComponent<Object_Selection_Status> ().selectionStatus = !(g.GetComponent<Object_Selection_Status>().selectionStatus); //GameObject.Find(name)
         }
 
